@@ -1,7 +1,5 @@
-require 'byebug'
 
 get '/' do
-  p Url.all
   @urls = url.last
   erb :"static/index"
 end
@@ -16,9 +14,6 @@ post '/urls' do
     else
       erb :"static/error"
     end
-  # else
-  #   erb :"static/error"
-  # end
 end
 
 get '/:short_url' do
