@@ -1,0 +1,11 @@
+<br>
+#### To create partial erb view file:
+```
+# app/views/partials/form.erb
+<h1>This is partial forms for AJAX calls</h1>
+...
+# To use it in existing view .erb file, example:
+	# in app/views/users/new.erb
+	<h2> User Data </h2>
+	<%= erb :"partial/form" %>
+```
