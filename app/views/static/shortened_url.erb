@@ -3,5 +3,5 @@
   <p>You have chosen to shorten this link:</p>
   <a><%=@url.long_url%></a>
     <p> Here is your shortened URL.</p>
-    	<a><%= @url.short_url%></a>
+    	<a href="/<%=@url.short_url%>"><%= @url.short_url %></a>
 </div>
