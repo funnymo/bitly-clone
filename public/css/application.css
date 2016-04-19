@@ -1,5 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Raleway);
 @import url(https://fonts.googleapis.com/css?family=Lato:700);
+@import url(https://fonts.googleapis.com/css?family=Exo+2:500);
 
 *:focus {outline: none;}
 
@@ -17,7 +18,7 @@ h1 {
 		padding: 0px;
 		margin-top: 50px;
 		margin-bottom: -15px;
-		font-family: "Raleway";
+		font-family: "Exo 2";
 	}
 h2 {
 		font-size: 0.8em;
