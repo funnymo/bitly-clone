@@ -1,24 +1,29 @@
-<!DOCTYPE html>
 <html>
 	<head>
-	<link rel="stylesheet" href="css/application.css">
 		<title>nitty bitty bitly</title>
-	</head>
+		<link rel="stylesheet" href="../../../public/css/application.css">
+        
+    </head>
 
-	<header id="header">
-	<div id="inner-header" class="page-title t-center">nitty bitty bitly <%= yield %>
-	</div>
-	</header>
-
-	<h1 class="slogan t-center">UNLEASH THE KRAKEN</h1>
-    <h2 class="description t-center">A maybe not short shortener making short URLs.
-    <a href="">Learn more.</a>
-    </h2>
-
-	<body>
-		<img src="http://24.media.tumblr.com/tumblr_mb7b7rRQnx1ryc6sso1_500.jpg">
-		<img src="http://24.media.tumblr.com/tumblr_mb7b7rRQnx1ryc6sso1_500.jpg">
-		<img src="http://24.media.tumblr.com/tumblr_mb7b7rRQnx1ryc6sso1_500.jpg">
+	<body id="img">
+        <script src="../../../public/js/application.js"></script>
+<!--		<%= yield %>-->
+        <div class="container">
+            <div class="header">
+                <h1 class="logo">
+                    makemeshort.
+                </h1>
+                <p class="slogan">Short but gets the job done.</p>
+                <p class="slogan2">Maybe not.</p>
+                <div class="form">
+                    <form action="/urls" method="post">
+	                   <input id="form" type ="text" name="long_url" placeholder="Url Here">
+                    </form>
+                    <div class="button">
+                        <input id="button" type ="submit" value="Short Me">
+                    </div>
+                </div>
+            </div>
+        </div>
 	</body>
 </html>
-

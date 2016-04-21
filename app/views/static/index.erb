@@ -2,3 +2,13 @@
 	<input id="monroe" type ="text" name="long_url" placeholder="enter url here">
 	<input id="marilyn" type ="submit" value="SHORTEN">
 </form>
+
+<% unless @url.nil? %>
+<div class="container">
+  <h1>You just shortened your URL! </h1>
+  <p>You have chosen to shorten this link:</p>
+  <a><%=@url.long_url%></a>
+    <p> Here is your shortened URL.</p>
+    	<a href="/<%=@url.short_url%>"><%= @url.short_url %></a>
+</div>
+<% end %>

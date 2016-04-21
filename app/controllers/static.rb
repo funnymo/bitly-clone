@@ -1,4 +1,3 @@
-
 get '/' do
   @urls = url.last
   erb :"static/index"
