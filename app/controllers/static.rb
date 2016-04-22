@@ -9,7 +9,7 @@ post '/urls' do
     url.short_url = "#{Url.shorten}"
     if url.save
       @url = url
-      erb :"static/shortened_url"
+        erb :"static/index"
     else
       erb :"static/error"
     end
@@ -20,5 +20,5 @@ get '/:short_url' do
   y = Url.find_by(short_url: params[:short_url])
   # y.click_count += 1
   # y.save
-  redirect "#{y.long_url}"
+  redirect "https://" + y.long_url
 end

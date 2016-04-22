@@ -1,13 +1,12 @@
 <html>
 	<head>
-		<title>nitty bitty bitly</title>
-		<link rel="stylesheet" href="../../../public/css/application.css">
-        
+		<title>makemeshort.</title>
+<!--		<link type="text/css" rel="stylesheet" href="../../../public/css/application.css">-->
+        <link rel="stylesheet" href="css/application.css">
+<!--        <script type="javascript" src="../../../public/js/application.js"></script>-->
     </head>
 
-	<body id="img">
-        <script src="../../../public/js/application.js"></script>
-<!--		<%= yield %>-->
+	<body>
         <div class="container">
             <div class="header">
                 <h1 class="logo">
@@ -16,14 +15,50 @@
                 <p class="slogan">Short but gets the job done.</p>
                 <p class="slogan2">Maybe not.</p>
                 <div class="form">
+                    <%=yield%>
+<!--
                     <form action="/urls" method="post">
 	                   <input id="form" type ="text" name="long_url" placeholder="Url Here">
                     </form>
                     <div class="button">
                         <input id="button" type ="submit" value="Short Me">
                     </div>
+-->
                 </div>
             </div>
         </div>
+        <script type="javascript" src="js/application.js"></script>
+        <script src="https://code.jquery.com/jquery-1.12.3.min.js" integrity="sha256-aaODHAgvwQW1bFOGXMeX+pC4PZIPsvn2h1sArYOhgXQ=" crossorigin="anonymous"></script>
 	</body>
 </html>
+
+
+<script>
+var array = ["http://bit.ly/1rpf9gF",
+             "http://bit.ly/1NmrThw",
+             "http://bit.ly/1VInQyD",
+             "http://bit.ly/1rpg1lk",
+             "http://bit.ly/1T1tDJx",
+             "http://bit.ly/1MKA3QP",
+             "http://bit.ly/1TlclKg",
+             "http://bit.ly/26gRGOo",
+             "http://bit.ly/1NDtCtF",
+             "http://bit.ly/1Nmsos0"];
+
+function shuffle(array) {
+  var currentIndex = array.length;
+  var temporaryValue;
+  var randomIndex;
+  while (0 !== currentIndex) {
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex -= 1;
+    temporaryValue = array[currentIndex];
+    array[currentIndex] = array[randomIndex];
+    array[randomIndex] = temporaryValue;
+  }
+  return array;
+}
+var shuffled_images = shuffle(array);
+var yourbackground = document.getElementById('img');
+yourbackground.style.backgroundImage = 'url(' + shuffled_images[0] + ')';
+</script>
