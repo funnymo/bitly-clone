@@ -122,3 +122,8 @@ table {
 #col_3 {
     width: 12%;
 }
+
+#logo_redirect {
+    text-decoration: none;
+    color:white;
+}
