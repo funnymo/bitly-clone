@@ -6,7 +6,7 @@ end
 post '/urls' do
   # if Url.where(long_url) == params['long_url']
     url = Url.new(long_url: params['long_url'])
-    url.short_url = "#{Url.shorten}"
+    url.short_url = url.shorten
     if url.save
       @url = url
         erb :"static/index"
