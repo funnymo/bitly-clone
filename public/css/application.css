@@ -73,6 +73,52 @@ input {
     font-size: 20;
 }
 
-#short_link {
+#short_link, #long_link, #click_count {
     color: white;
+    font-size: 13;
+}
+#table_header {
+    color: white;
+    font-family: "Lato";
+    box-sizing: border-box;
+    background-color: inherit;
+    text-align: left;
+    font-weight: bolder;
+}
+.table_container {
+    background-color: black;
+    position:relative;
+    left: 0;
+    top: 0;
+    overflow-y: scroll;
+    max-height: 9em;
+    opacity: 0.6;
+}
+
+tbody {
+    font-family: "Lato";
+    text-align: left;
+    word-wrap: break-word;
+    table-layout: fixed;
+}
+
+#long_link {
+    word-wrap: break-word;
+}
+
+table {
+    width:100%;
+    table-layout: fixed;
+}
+
+#col_1 {
+    width: 50%;
+}
+
+#col_2 {
+    width: 38%;
+}
+
+#col_3 {
+    width: 12%;
 }

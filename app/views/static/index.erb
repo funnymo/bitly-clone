@@ -1,25 +1,39 @@
-<body id="img">
-<form action="/urls" method="post">
-    <input id="form" type ="text" name="long_url" placeholder="Url Here">
-</form>
-<div class="button">
-    <input id="button" type ="submit" value="Short Me">
-</div>
-
-<% unless @url.nil? %>
-    <div class="shortened_container">
-        <div class="short_link">
-<!--
-        <h1>You just shortened your URL! </h1>
-        <p>You have chosen to shorten this link:</p>
-        <a><%=@url.long_url%></a>
--->
-        <p> Here is your shortened URL:
-    	<a id="short_link" href="<%=@url.short_url%>">http://nib.it/<%= @url.short_url %></a>
-        </p>
-        </div>
+<body id='img'>
+    <form action="/urls" method="post">
+        <input id="form" type ="text" name="long_url" placeholder="Url Here">
+    </form>
+    <div class="button">
+        <input id="button" type ="submit" value="Short Me">
     </div>
-        
-<% end %>
+
+    <% unless @url.nil? %>
+        <div class="shortened_container">
+            <p> Here is your shortened URL:
+    	   <a id="short_link" href="<%=@url.short_url%>">http://nib.it/<%= @url.short_url %></a>
+            </p>
+        </div>
+    <% end%>
+    
+    <div class="table_container">
+    <% unless @url.nil? %>
+    <% @url=Url.all %>
+    <table>
+        <tr id='table_header'>
+            <th id="col_1">Original</th>
+            <th id="col_2">Shortened</th>
+            <th id="col_3">Count</th>
+        </tr>
+        <tbody>
+            <% @url.each do |x| %>
+            <tr>
+                <td><a id="long_link" href="/<%=x.long_url %>"><%=x.long_url %></a></td>
+                <td><a id="short_link" href="/<%=x.short_url %>">http://nib.it/<%=x.short_url %></a></td>
+                <td><a id="click_count"><%=x.click_count%></a></td>
+            </tr>
+            <% end%>
+        </tbody>
+    </table>
+    <% end%>
+    </div>
     
 </body>

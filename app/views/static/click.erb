@@ -1,0 +1,15 @@
+<h1>asd</h1>
+
+<table border="1">
+    <tr id='table_header'>
+        <th>Original</th>
+        <th>Shortened</th>
+        <th>Count</th>
+    <tr>
+        <%= Url.each do |x| %>
+        <td><a href="/<%=x.long_url %>"><%=x.long_url %></a></td>
+        <td><a href="/<%=x.short_url %>"><%=x.short_url %></a></td>
+        <td><a href="/count"> Show Link Count: <%=x.counter %></a></td> 
+        <% end  %>
+    </tr>
+</table>

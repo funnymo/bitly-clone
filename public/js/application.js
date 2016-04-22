@@ -1,3 +1,5 @@
+//$().ready(function() {
+
 var array = ["http://bit.ly/1rpf9gF",
              "http://bit.ly/1NmrThw",
              "http://bit.ly/1VInQyD",
@@ -25,3 +27,7 @@ function shuffle(array) {
 var shuffled_images = shuffle(array);
 var yourbackground = document.getElementById('img');
 yourbackground.style.backgroundImage = 'url(' + shuffled_images[0] + ')';
+
+//});
+
+
